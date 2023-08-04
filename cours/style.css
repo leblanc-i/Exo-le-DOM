@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  text-align: center;
+  color: white;
+  min-height: 200vh;
+}
+.box {
+  background: black;
+  padding: 10px;
+}
+p {
+  visibility: hidden;
+  margin: 10px auto 0;
+  width: 240px;
+}
