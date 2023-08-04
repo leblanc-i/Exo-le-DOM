@@ -59,3 +59,36 @@ questionBox.addEventListener("mouseout", () => {
 response.addEventListener("mouseover", () => {
     response.style.transform = "rotate(2deg)";
 });
+
+// *** KeyPress Event ***
+const keyPressContainer = document.querySelector(".keypress");
+const key = document.querySelector("#key");
+
+// Fonction qui emet un son
+const ring = () => {
+    const audio = new Audio();
+    audio.src = "Enter.mp3";
+    audio.play();
+}
+
+document.addEventListener("keypress", (e) => {
+    key.textContent = e.key;
+
+    if (e.key === "t") {
+        keyPressContainer.style.background = "teal";
+    } else if (e.key === "r") {
+        keyPressContainer.style.background = "red";
+    } else if (e.key === "b") {
+        keyPressContainer.style.background = "blue";
+    } else if (e.key === "y") {
+        keyPressContainer.style.background = "yellow";
+    } else if (e.key === "p") {
+        keyPressContainer.style.background = "pink";
+    } else if (e.key === "g") {
+        keyPressContainer.style.background = "green";
+    } else {
+        keyPressContainer.style.background = "black";
+    }
+
+    ring();
+});
