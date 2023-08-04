@@ -7,6 +7,7 @@ body {
   text-align: center;
   color: white;
   min-height: 200vh;
+  overflow-x: hidden;
 }
 .box {
   background: black;
@@ -16,10 +17,30 @@ p {
   visibility: hidden;
   margin: 10px auto 0;
   width: 240px;
+  opacity: 0;
+  background: white;
+  transform: translateX(-200px);
 }
 .box-clicked {
-  background: deepskyblue;
+  background: whitesmoke;
   border-radius: 30px;
-  border: 5px dashed blue;
+  border: 5px dashed black;
   transition: 1s;
+}
+.show-response {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.6s;
+}
+.mousemove {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  z-index: -1;
 }

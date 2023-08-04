@@ -20,8 +20,42 @@ questionBox.addEventListener("click", () => {
 });
 
 btn1.addEventListener("click", () => {
-    response.style.visibility = "visible";
+    response.classList.add("show-response");
+    response.style.color = "green";
 });
 btn2.addEventListener("click", () => {
-    response.style.visibility = "visible";
-})
+    response.classList.add("show-response");
+    response.style.color = "red";
+});
+
+// *** Mouse Events ***
+const mouseMove = document.querySelector(".mousemove");
+
+window.addEventListener("mousemove", (e) => {
+    mouseMove.style.left = e.pageX + "px";
+    mouseMove.style.top = e.pageY + "px";
+});
+
+// Quand on click sur la souris ***
+window.addEventListener("mousedown", () => {
+    mouseMove.style.transform = "scale(2) translate(-25%, -25%)";
+    mouseMove.style.border = "2px solid teal";
+});
+
+// Quand on relache la souris ***
+window.addEventListener("mouseup", () => {
+    mouseMove.style.transform = "scale(1) translate(-50%, -50%)";
+    mouseMove.style.border = "2px solid black";
+});
+// Quand la souris survole sur un element ***
+questionBox.addEventListener("mouseenter", () => {
+    questionBox.style.background = "rgba(0,0,0,0.6)";
+});
+// Quand la souris sorte de l'element ***
+questionBox.addEventListener("mouseout", () => {
+    questionBox.style.background = "blue";
+});
+// Quand la souris survole l'element(hover) ***
+response.addEventListener("mouseover", () => {
+    response.style.transform = "rotate(2deg)";
+});
