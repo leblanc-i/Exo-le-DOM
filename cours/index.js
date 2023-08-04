@@ -8,10 +8,20 @@
 
 // *** Click event ***
 const questionBox = document.querySelector(".box");
-console.log(questionBox);
+const btn1 = document.getElementById("btn-1");
+const btn2 = document.getElementById("btn-2");
+const response = document.querySelector("p");
+// console.log(questionBox);
 
 // questionBox.style.borderRadius = "150px";
 
 questionBox.addEventListener("click", () => {
-    console.log("click !");
+    questionBox.classList.toggle("box-clicked");
+});
+
+btn1.addEventListener("click", () => {
+    response.style.visibility = "visible";
+});
+btn2.addEventListener("click", () => {
+    response.style.visibility = "visible";
 })
