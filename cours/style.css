@@ -12,6 +12,7 @@ body {
 .box {
   background: black;
   padding: 10px;
+  margin-bottom: 10px;
 }
 p {
   visibility: hidden;

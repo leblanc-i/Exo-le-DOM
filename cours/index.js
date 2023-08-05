@@ -105,4 +105,13 @@ window.addEventListener("scroll", () => {
     } else {
         navBar.style.top = "-50px";
     }
+});
+
+// *** Formu Events ***
+const inputName = document.querySelector("input[type='text']");
+let pseudo = "";
+
+inputName.addEventListener("input", (e) => {
+    // e.target.value pour acceder a ce qui est taper dans l'input
+    pseudo = e.target.value; // on stock la valeur taper dans pseudo
 })
