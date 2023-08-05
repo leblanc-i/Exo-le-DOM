@@ -92,3 +92,17 @@ document.addEventListener("keypress", (e) => {
 
     ring();
 });
+
+// *** Scroll Event ***
+const navBar = document.querySelector("nav");
+
+// Creation de la fonction au Scroll
+window.addEventListener("scroll", () => {
+
+    // Si (window.scrollY) qui signifie la valeur du scroll. est superieur à 5px execute le code en dessous
+    if (window.scrollY > 5) {
+        navBar.style.top = 0;
+    } else {
+        navBar.style.top = "-50px";
+    }
+})
