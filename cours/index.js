@@ -109,9 +109,20 @@ window.addEventListener("scroll", () => {
 
 // *** Formu Events ***
 const inputName = document.querySelector("input[type='text']");
+const select = document.querySelector("select");
+const form = document.querySelector("form");
 let pseudo = "";
+let language = "";
 
 inputName.addEventListener("input", (e) => {
     // e.target.value pour acceder a ce qui est taper dans l'input
     pseudo = e.target.value; // on stock la valeur taper dans pseudo
+});
+
+select.addEventListener("input", (e) => {
+    language =e.target.value; // on stock le langage choisis dans language
+}):
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
 })
