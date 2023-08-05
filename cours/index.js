@@ -120,9 +120,9 @@ inputName.addEventListener("input", (e) => {
 });
 
 select.addEventListener("input", (e) => {
-    language =e.target.value; // on stock le langage choisis dans language
-}):
+    language = e.target.value; // on stock le langage choisis dans language
+});
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault()
 })
