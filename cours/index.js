@@ -107,7 +107,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// *** Formu Events ***
+// *** Form Events ***
 const inputName = document.querySelector("input[type='text']");
 const select = document.querySelector("select");
 const form = document.querySelector("form");
@@ -124,5 +124,18 @@ select.addEventListener("input", (e) => {
 });
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault()
-})
+    e.preventDefault();
+
+    // L'id de nos input est connut par le javascript meme sans etre declaréé.
+
+    // Et là nous disons à notre formulaire que quand les cgv sont checkées d'acceder à son enfant direct div et de creer dedans du contenu HTML(h3 et h4).
+    if (cgv.checked) {
+        document.querySelector("form > div").innerHTML = `
+            <h3>Pseudo : ${pseudo}</h3>
+            <h4>Langage préféré : ${language}</h4>`;
+    } else {
+        alert("Veuillez accepter les CGV");
+    }
+});
+
+// *** Load Events ***
