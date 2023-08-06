@@ -196,3 +196,25 @@ questionBox.addEventListener("click", (e) => {
     // on empeche l'execution des autres evenements apres avoir clické.
     e.stopPropagation();
 });
+
+// *** removeEventListene *** ça marche au cas ou on veut retirer un addEventListener.
+
+// *** BOM *** (c'est l'objet window il est au dessus de tout).
+
+// Savoir la hauteur de la fenetre
+console.log(window.innerHeight);
+
+// la position quand on scoll
+console.log(window.screenY);
+
+// window.open permet d'ouvir une page popup et qu'on porra parametré
+// window.open("https://google.com", "cours js", "height=400 width=500");
+
+// window.close permet de tout fermer
+// window.close();
+
+// confirm 
+// c'est une alerte qui te demande d'accepter ou d'annuler
+btn2.addEventListener("click", () => {
+    confirm("Etes-vous sur de votre reponse?");
+});
