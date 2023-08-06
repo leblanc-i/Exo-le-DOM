@@ -161,3 +161,31 @@ boxes.forEach((box) => {
 });
 
 // *** addEventListener Vs onClick ***
+
+// Le onclick n'est pas tres recommander
+// Contrairement à l'addEventLisrener il ne peut qu'etre utiliser qu'une fois par evenement(scroll, click).
+
+//-------------------------------------------
+
+// document.body.onclick = () => {
+//     console.log("Clické");
+// };
+
+
+// Bubbling => (de base l'eventListener est parametré en mode Bubbling).
+// En mettant le false au Bubbling
+// Et le true à la Usecapture
+// On modifie l'odre de la lecture du script
+// Il va d'abord lu la Usecapture ensuite le Bubbling.
+document.body.addEventListener("click", () => {
+    console.log("click 1 !");
+
+    // de base il est sur false donc on peut si on veut ne pas mettre le false.
+}, false );
+
+// Usecapture
+document.body.addEventListener("click", () => {
+    console.log("click 2 !");
+}, true);
+
+// ***  ***
