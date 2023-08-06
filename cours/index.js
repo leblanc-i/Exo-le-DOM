@@ -218,3 +218,11 @@ console.log(window.screenY);
 btn2.addEventListener("click", () => {
     confirm("Etes-vous sur de votre reponse?");
 });
+
+// prompt
+// cest une alerte dans le quel on peut ecrire du contenu qu'on pourra recuperer plus tard dans une variable.
+btn1.addEventListener("click", () => {
+    let nom = prompt("Entrez votre nom");
+
+    questionBox.innerHTML = "<h3>Bravo " + nom + "</h3>";
+});
