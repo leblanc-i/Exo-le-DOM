@@ -139,3 +139,10 @@ form.addEventListener("submit", (e) => {
 });
 
 // *** Load Events ***
+
+// On porra mettre tout une logique qui s'execute une fois que tout ce qui est au dessus de lui sera d'abord chargé.
+window.addEventListener("load", () => {
+    console.log("Document Chargé !");
+});
+
+// *** For each ***
