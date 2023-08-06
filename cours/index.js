@@ -224,5 +224,8 @@ btn2.addEventListener("click", () => {
 btn1.addEventListener("click", () => {
     let nom = prompt("Entrez votre nom");
 
-    questionBox.innerHTML = "<h3>Bravo " + nom + "</h3>";
+    // Mais la ça ecrase le contenu de questionBox
+    // questionBox.innerHTML = "<h3>Bravo " + nom + "</h3>";
+    // Si on veut pas ecraser on fait :
+    questionBox.innerHTML += "<h3>Bravo " + nom + "</h3>";
 });
