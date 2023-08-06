@@ -188,4 +188,11 @@ document.body.addEventListener("click", () => {
     console.log("click 2 !");
 }, true);
 
-// ***  ***
+// *** Stop propagation ***
+
+// ça empeche la propagation d'un evenement
+questionBox.addEventListener("click", (e) => {
+    alert("test !");
+    // on empeche l'execution des autres evenements apres avoir clické.
+    e.stopPropagation();
+});
