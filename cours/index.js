@@ -145,4 +145,19 @@ window.addEventListener("load", () => {
     console.log("Document Chargé !");
 });
 
-// *** For each ***
+// *** ForEach(pour chacun d'eux) ***
+
+// On l'utilise seulement pour plusieurs element ayant la meme class
+const boxes = document.querySelectorAll(".box");
+console.log(boxes);
+
+// On utilise le forEach parce-qu'on ne peut pas utiliser le addEventListener pour plusieurs elements(boxes).
+boxes.forEach((box) => {
+
+    // Et là enfin on peut utiliser le addEventListener pour donner un comportement à chaque box clické.
+    box.addEventListener("click", (e) => {
+        box.style.transform = "scale(0.7)";
+    })
+});
+
+// *** addEventListener Vs onClick ***
