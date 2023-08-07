@@ -229,3 +229,9 @@ btn1.addEventListener("click", () => {
     // Si on veut pas ecraser on fait :
     questionBox.innerHTML += "<h3>Bravo " + nom + "</h3>";
 });
+
+// seTimeout
+// on definis une fonction qui se joue à partir d'un temps definis
+setTimeout(() => {
+    questionBox.style.borderRadius = "300px";// logique à executer
+}, 2000); // temps avant l'execution en miliseconde.
