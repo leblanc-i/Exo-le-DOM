@@ -53,6 +53,24 @@ nav {
   top: -50px;
   transition: 0.6s;
 }
+nav::after {
+  content: "";
+  height: 150px;
+  width: 150px;
+  background: radial-gradient(circle closest-side,
+    rgba(255, 255, 255, 0.74), transparent
+  );
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  z-index: 20;
+  opacity: 0;
+}
+nav:hover::after {
+  opacity: 1;
+  left: var(--x);
+  top: var(--y);
+}
 ul {
   display: flex;
   align-items: center;

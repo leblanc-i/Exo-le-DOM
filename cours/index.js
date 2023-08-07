@@ -264,5 +264,19 @@ location.replace() // on met le nouveau emplacement dans les parenthèses.
 
 // Au chargement de la page je veux etre sur cet emplacement suivant
 window.onload = () => {
-    location.href = "" // et on met l'adresse.
-}
+    location.href = "#" // et on met l'adresse.
+};
+
+// Navigator
+console.log("navigator.userAgent"); // Obtenir toutes les infos de notre utilisateur.
+
+// https://developper.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+// History proprieté.
+
+// setProperty
+// Suivre la souris avec l'effet blanc after au survol de la nav
+window.addEventListener("mousemove", (e) => {
+    navBar.style.setProperty("--x", e.layerX + "px");
+    navBar.style.setProperty("--y", e.layerY + "px");
+});
