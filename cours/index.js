@@ -238,10 +238,31 @@ setTimeout(() => {
 
 // setInterval
 // execute un code tout le temps qu'on definis
-setInterval(() => {
+let interval = setInterval(() => {
     document.body.innerHTML += `
         <div class="box">
             <h2>Nouvelle Boite</h2>
         </div>
         `;
 }, 1000);
+
+// clearInterval
+// pour arreter le setInterval on le stock dans une variable et le passer en parametre au clearInterval.
+document.body.addEventListener("click", (e) => {
+    e.target.remove(); // permet de supprimer la cible
+    clearInterval(interval);
+});
+
+// Location: le lien exacte ou on se trouve
+console.log(location.href);
+console.log(location.host);
+console.log(location.pathname);
+console.log(location.search);
+
+// remplacer l'emplacement sur lequel on se trouve
+location.replace() // on met le nouveau emplacement dans les parenthèses.
+
+// Au chargement de la page je veux etre sur cet emplacement suivant
+window.onload = () => {
+    location.href = "" // et on met l'adresse.
+}
