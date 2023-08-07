@@ -235,3 +235,13 @@ btn1.addEventListener("click", () => {
 setTimeout(() => {
     questionBox.style.borderRadius = "300px";// logique à executer
 }, 2000); // temps avant l'execution en miliseconde.
+
+// setInterval
+// execute un code tout le temps qu'on definis
+setInterval(() => {
+    document.body.innerHTML += `
+        <div class="box">
+            <h2>Nouvelle Boite</h2>
+        </div>
+        `;
+}, 1000);
